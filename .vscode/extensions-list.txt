@@ -1,0 +1,7 @@
+asvetliakov.vscode-neovim
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons
+pixl-garden.bongocat
+pkief.material-icon-theme
+shopify.theme-check-vscode
+sissel.shopify-liquid

@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "editor.fontFamily": "'SpaceMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 16,
+    "[liquid]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid"
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
+}
