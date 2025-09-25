@@ -170,6 +170,7 @@ export alfinet
 
 alias cdw='cd ~/Workspace'
 alias please='sudo'
+alias cdwp='cd ~/"Personal Workspace"'
 
 # Shopify Hydrogen alias to local projects
 alias h2='$(npm prefix -s)/node_modules/.bin/shopify hydrogen'
