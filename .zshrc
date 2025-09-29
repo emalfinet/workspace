@@ -168,9 +168,52 @@ function alfinet {
 }
 export alfinet
 
+function mkassets {
+    # uso: workassets "Nome do Projeto"
+    local base="$HOME/Workassets"
+    local project="$*"
+
+    if [[ -z "$project" ]]; then
+      echo "Uso: workassets \"Nome do Projeto\""
+      return 2
+    fi
+
+    # garante que a pasta base exista
+    if [[ ! -d "$base" ]]; then
+      mkdir -p "$base" || { echo "Erro: não consegui criar $base"; return 1; }
+    fi
+
+    # entra na pasta base
+    cd "$base" || { echo "Erro: não consegui entrar em $base"; return 1; }
+
+    # cria (se preciso) e entra na pasta do projeto
+    if [[ -d "$project" ]]; then
+      echo "Aviso: pasta \"$project\" já existe; entrando nela."
+    else
+      mkdir -p "$project" || { echo "Erro: não consegui criar \"$project\""; return 1; }
+    fi
+    cd "$project" || { echo "Erro: não consegui entrar em \"$project\""; return 1; }
+
+    # cria subpastas
+    mkdir -p \
+      "Videos" \
+      "Imagens" \
+      "Logo" \
+      "Fontes" \
+      "ID" \
+      "Banners" \
+      "Layout" \
+      "Icones"
+
+    echo "Estrutura criada em: $(pwd)"
+}
+
+export mkassets
+
 alias cdw='cd ~/Workspace'
 alias please='sudo'
-alias cdwp='cd ~/"Personal Workspace"'
+alias cdwp='cd ~/"Personal Work"'
+alias naut='nautilus . &'
 
 # Shopify Hydrogen alias to local projects
 alias h2='$(npm prefix -s)/node_modules/.bin/shopify hydrogen'
